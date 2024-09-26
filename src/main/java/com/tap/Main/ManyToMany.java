@@ -8,7 +8,7 @@ public class ManyToMany {
 	{
 		HibernateManager3 hm3 = new HibernateManager3();
 		
-		hm3.add();
+		hm3.display();
 
 	}
 

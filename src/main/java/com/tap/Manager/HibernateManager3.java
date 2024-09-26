@@ -1,6 +1,7 @@
 package com.tap.Manager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
@@ -51,4 +52,40 @@ public class HibernateManager3
 		
 	}
 
+	
+	
+	public void display()
+	{
+//		-----------fetching data from employees --------------
+//		Employees employee = session.get(Employees.class, 2);
+//		List<Project> projects = employee.getProjects();
+//		System.out.println(employee);
+//	
+//	
+//		for(Project p : projects)
+//			System.out.println(p);
+		
+//		---------------fetching data from projects-------------
+		
+		Project project = session.get(Project.class, 102);
+		List<Employees> employees = project.getEmployees();
+		
+		System.out.println(project);
+		
+		for(Employees e : employees)
+			System.out.println(e);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
